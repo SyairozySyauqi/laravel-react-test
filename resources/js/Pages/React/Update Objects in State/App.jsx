@@ -1,4 +1,4 @@
-import MyComponent from "./React/Update Objects in State/MyComponent";
+import MyComponent from "./MyComponent";
 
 export default function App() {
     return (
