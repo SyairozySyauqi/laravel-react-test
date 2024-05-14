@@ -1,4 +1,4 @@
-import MyComponent from "./React/onChange Event Handler/MyComponent";
+import MyComponent from "./MyComponent";
 
 export default function App() {
     return (
