@@ -1,5 +1,5 @@
-import Counter from "./React/useState Hook/Counter";
-import MyComponent from "./React/useState Hook/MyComponent";
+import Counter from "./Counter";
+import MyComponent from "./MyComponent";
 
 export default function App() {
     return (
