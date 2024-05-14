@@ -1,4 +1,4 @@
-import ColorPicker from "./React/Color Picker App/ColorPicker";
+import ColorPicker from "./ColorPicker";
 
 export default function App() {
     return (
