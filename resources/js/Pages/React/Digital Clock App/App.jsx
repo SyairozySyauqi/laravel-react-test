@@ -1,4 +1,4 @@
-import DigitalClock from "./React/Digital Clock App/DigitalClock";
+import DigitalClock from "./DigitalClock";
 
 export default function App() {
     return (
