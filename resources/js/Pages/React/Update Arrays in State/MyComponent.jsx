@@ -16,6 +16,9 @@ export default function MyComponent() {
     function handleRemoveFood(index) {
         setFoods(foods.filter((_, i) => i !== index));
     }
+    function handleModelChange(event) {
+        setCar((c) => ({ ...c, model: event.target.value }));
+    }
 
     return (
         <>
