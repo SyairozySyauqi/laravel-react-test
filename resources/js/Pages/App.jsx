@@ -1,9 +1,9 @@
-import ToDoList from "./React/To Do List App/ToDoList";
+import MyComponent from "./React/useEffect Hook/MyComponent2";
 
 export default function App() {
     return (
         <>
-            <ToDoList />
+            <MyComponent />
         </>
     );
 }
