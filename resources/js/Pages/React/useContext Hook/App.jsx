@@ -1,4 +1,4 @@
-import ComponentA from "./React/useContext Hook/ComponentA";
+import ComponentA from "./ComponentA";
 
 export default function App() {
     return (
