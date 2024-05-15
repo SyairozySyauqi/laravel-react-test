@@ -7,7 +7,7 @@ export default function MyComponent() {
         const newFood = document.getElementById("foodInput").value;
         document.getElementById("foodInput").value = "";
 
-        if (newFood == "") {
+        if (newFood.trim !== "") {
             alert("Food must be filled out");
         } else {
             setFoods((f) => [...f, newFood]);

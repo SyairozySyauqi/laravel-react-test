@@ -9,15 +9,14 @@ export default function MyComponent() {
     function handleAddCar(event) {
         const newCar = { year: carYear, make: carMake, model: carModel };
 
-        if (newCar.make == "" || newCar.model == "") {
+        if (newCar.make.trim !== "" || newCar.model.trim !== "") {
             alert("Car maker or model must be filled out");
         } else {
             setCars((c) => [...c, newCar]);
+            setCarYear(new Date().getFullYear());
+            setCarMake("");
+            setCarModel("");
         }
-
-        setCarYear(new Date().getFullYear());
-        setCarMake("");
-        setCarModel("");
     }
     function handleRemoveCar(index) {
         setCars((c) => c.filter((_, i) => i !== index));

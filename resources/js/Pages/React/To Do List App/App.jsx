@@ -1,4 +1,4 @@
-import ToDoList from "./React/To Do List App/ToDoList";
+import ToDoList from "./ToDoList";
 
 export default function App() {
     return (
