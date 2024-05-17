@@ -20,6 +20,10 @@
         "vite": "^5.0"
     },
     "dependencies": {
+        "@heroicons/react": "^2.1.3",
+        "headlessui": "github:tailwindlabs/headlessui",
+        "heroicons": "github:tailwindlabs/heroicons",
+        "heroicons-react": "^1.4.1",
         "react-router-dom": "^6.23.1"
     }
 }
