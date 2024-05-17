@@ -1,10 +1,10 @@
 import Layout from "./Components/Layout";
 
-export default function About() {
+export default function Home() {
     return (
         <>
             <Layout>
-                <p>About</p>
+                <p>Home</p>
             </Layout>
         </>
     );

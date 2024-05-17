@@ -24,12 +24,20 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::get('/react', function () {
+// Route::get('/react', function () {
+//     return Inertia::render('App');
+// });
+
+Route::get('/test', function () {
     return Inertia::render('App');
 });
 
-Route::get('/laracasts', function () {
-    return Inertia::render('App');
+Route::get('/test/about', function () {
+    return Inertia::render('Laracasts/About');
+});
+
+Route::get('/test/contact', function () {
+    return Inertia::render('Laracasts/Contact');
 });
 
 require __DIR__ . '/auth.php';
