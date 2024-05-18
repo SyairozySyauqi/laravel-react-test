@@ -17,6 +17,9 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/dashboard2', function () {
+    return Inertia::render('Dashboard2');
+})->middleware(['auth', 'verified'])->name('dashboard2');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -30,14 +33,14 @@ Route::middleware('auth')->group(function () {
 
 Route::get('/test', function () {
     return Inertia::render('App');
-});
+})->name('test');
 
 Route::get('/test/about', function () {
     return Inertia::render('Laracasts/About');
-});
+})->name('test.about');
 
 Route::get('/test/contact', function () {
     return Inertia::render('Laracasts/Contact');
-});
+})->name('test.contact');
 
 require __DIR__ . '/auth.php';

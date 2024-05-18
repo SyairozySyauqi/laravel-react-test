@@ -1,4 +1,4 @@
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
 
 export default function List2({ items = [], category = "Category" }) {
     const itemList = items;

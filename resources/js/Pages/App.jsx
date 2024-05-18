@@ -1,5 +1,4 @@
-import NavLink from "@/Components/NavLink";
-import Layout from "./Laracasts/Components/Layout";
+import Authenticated from "@/Layouts/AuthenticatedLayout";
 import Home from "./Laracasts/Home";
 
 export default function App() {

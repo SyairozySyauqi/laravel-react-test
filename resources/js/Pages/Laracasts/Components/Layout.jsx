@@ -1,7 +1,6 @@
-import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
-import { Link } from "@inertiajs/react";
+import NavLink from "./NavLink";
 
 const user = {
     name: "Syauqi",
@@ -9,9 +8,17 @@ const user = {
     imageUrl: "https://laracasts.com/images/lary-ai-face.svg",
 };
 const navigation = [
-    { name: "Home", href: "/test", current: true },
-    { name: "About", href: "/test/about", current: false },
-    { name: "Contact", href: "/test/contact", current: true },
+    { name: "Home", href: "/test", current: route().current("test") },
+    {
+        name: "About",
+        href: "/test/about",
+        current: route().current("test.about"),
+    },
+    {
+        name: "Contact",
+        href: "/test/contact",
+        current: route().current("test.contact"),
+    },
 ];
 const userNavigation = [
     { name: "Your Profile", href: "#" },
@@ -34,7 +41,7 @@ export default function Example({ children, heading }) {
         <body class="h-full">
         ```
       */}
-            <div className="min-h-full">
+            <div className="min-h-svh">
                 <Disclosure as="nav" className="bg-gray-800">
                     {({ open }) => (
                         <>
@@ -50,25 +57,30 @@ export default function Example({ children, heading }) {
                                         </div>
                                         <div className="hidden md:block">
                                             <div className="ml-10 flex items-baseline space-x-4">
-                                                {navigation.map((item) => (
-                                                    <Link
-                                                        key={item.name}
-                                                        href={item.href}
-                                                        className={classNames(
-                                                            item.current
-                                                                ? "bg-gray-900 text-white"
-                                                                : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                                                            "rounded-md px-3 py-2 text-sm font-medium"
-                                                        )}
-                                                        aria-current={
-                                                            item.current
-                                                                ? "page"
-                                                                : undefined
-                                                        }
-                                                    >
-                                                        {item.name}
-                                                    </Link>
-                                                ))}
+                                                <NavLink
+                                                    href={route("test")}
+                                                    active={route().current(
+                                                        "test"
+                                                    )}
+                                                >
+                                                    Home
+                                                </NavLink>
+                                                <NavLink
+                                                    href={route("test.about")}
+                                                    active={route().current(
+                                                        "test.about"
+                                                    )}
+                                                >
+                                                    About
+                                                </NavLink>
+                                                <NavLink
+                                                    href={route("test.contact")}
+                                                    active={route().current(
+                                                        "test.contact"
+                                                    )}
+                                                >
+                                                    Contact
+                                                </NavLink>
                                             </div>
                                         </div>
                                     </div>
@@ -199,7 +211,7 @@ export default function Example({ children, heading }) {
                         </h1>
                     </div>
                 </header>
-                <main>
+                <main className="h-screen bg-gray-100">
                     <div className="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
                         <article>{children}</article>
                     </div>
