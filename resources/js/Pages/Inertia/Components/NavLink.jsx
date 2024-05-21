@@ -4,6 +4,7 @@ export default function NavLink({
     active = false,
     className = "",
     children,
+    method = "get",
     ...props
 }) {
     return (
@@ -16,6 +17,7 @@ export default function NavLink({
                     : "text-gray-300 hover:bg-gray-700 hover:text-white ") +
                 className
             }
+            method={method}
         >
             {children}
         </Link>

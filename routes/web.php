@@ -50,12 +50,21 @@ Route::get('/inertia', function () {
 })->name('inertia');
 
 Route::get('/inertia/users', function () {
-    sleep(2);
-    return Inertia::render('Inertia/Users');
+    return Inertia::render('Inertia/Users', [
+        'time' => now()->toTimeString()
+    ]);
 })->name('inertia.users');
 
 Route::get('/inertia/settings', function () {
     return Inertia::render('Inertia/Settings');
 })->name('inertia.settings');
+
+// Route::post('/inertia/logout', function () {
+//     return dd('logging the user out');
+// })->name('inertia.logout');
+
+Route::post('/inertia/logout', function () {
+    dd('tes');
+})->name('inertia.logout');
 
 require __DIR__ . '/auth.php';

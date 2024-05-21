@@ -85,6 +85,13 @@ export default function Example({ children, heading }) {
                                                 >
                                                     Settings
                                                 </NavLink>
+                                                <NavLink
+                                                    href={"/inertia/logout"}
+                                                    method="post"
+                                                    as="button"
+                                                >
+                                                    Log Out
+                                                </NavLink>
                                             </div>
                                         </div>
                                     </div>
