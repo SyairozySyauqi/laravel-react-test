@@ -21,6 +21,7 @@
     },
     "dependencies": {
         "@heroicons/react": "^2.1.3",
+        "@inertiajs/progress": "^0.2.7",
         "headlessui": "github:tailwindlabs/headlessui",
         "heroicons": "github:tailwindlabs/heroicons",
         "heroicons-react": "^1.4.1",

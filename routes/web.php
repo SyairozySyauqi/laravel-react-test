@@ -43,4 +43,19 @@ Route::get('/test/contact', function () {
     return Inertia::render('Laracasts/Contact');
 })->name('test.contact');
 
+Route::get('/inertia', function () {
+    return Inertia::render('Inertia/Home', ['name' => 'MSS', 'frameworks' => [
+        'Laravel', 'React', 'Inertia'
+    ]]);
+})->name('inertia');
+
+Route::get('/inertia/users', function () {
+    sleep(2);
+    return Inertia::render('Inertia/Users');
+})->name('inertia.users');
+
+Route::get('/inertia/settings', function () {
+    return Inertia::render('Inertia/Settings');
+})->name('inertia.settings');
+
 require __DIR__ . '/auth.php';
