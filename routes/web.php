@@ -35,9 +35,9 @@ Route::get('/test', function () {
     return Inertia::render('App');
 })->name('test');
 
-Route::get('/test/about', function () {
-    return Inertia::render('Laracasts/About');
-})->name('test.about');
+Route::get('/test/jobs', function () {
+    return Inertia::render('Laracasts/Jobs');
+})->name('test.jobs');
 
 Route::get('/test/contact', function () {
     return Inertia::render('Laracasts/Contact');

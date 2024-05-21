@@ -24,6 +24,7 @@
         "headlessui": "github:tailwindlabs/headlessui",
         "heroicons": "github:tailwindlabs/heroicons",
         "heroicons-react": "^1.4.1",
+        "nprogress": "^0.2.0",
         "react-router-dom": "^6.23.1"
     }
 }

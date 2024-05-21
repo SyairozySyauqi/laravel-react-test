@@ -1,12 +1,12 @@
 import { Head } from "@inertiajs/react";
 import Layout from "./Components/Layout";
 
-export default function About() {
+export default function Jobs() {
     return (
         <>
-            <Head title="About" />
-            <Layout heading={"About"}>
-                <p>About</p>
+            <Head title="Jobs" />
+            <Layout heading={"Jobs"}>
+                <p>Jobs</p>
             </Layout>
         </>
     );

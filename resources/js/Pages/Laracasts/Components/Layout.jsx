@@ -10,9 +10,9 @@ const user = {
 const navigation = [
     { name: "Home", href: "/test", current: route().current("test") },
     {
-        name: "About",
-        href: "/test/about",
-        current: route().current("test.about"),
+        name: "Jobs",
+        href: "/test/jobs",
+        current: route().current("test.jobs"),
     },
     {
         name: "Contact",
@@ -66,12 +66,12 @@ export default function Example({ children, heading }) {
                                                     Home
                                                 </NavLink>
                                                 <NavLink
-                                                    href={route("test.about")}
+                                                    href={route("test.jobs")}
                                                     active={route().current(
-                                                        "test.about"
+                                                        "test.jobs"
                                                     )}
                                                 >
-                                                    About
+                                                    Jobs
                                                 </NavLink>
                                                 <NavLink
                                                     href={route("test.contact")}
