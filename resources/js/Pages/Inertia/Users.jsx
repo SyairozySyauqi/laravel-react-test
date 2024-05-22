@@ -6,6 +6,7 @@ export default function Users({ time }) {
         <>
             <Head title="Users" />
             <Example heading={"Users"}>
+                <p>Users</p>
                 <p className="mt-[1000px]">The current time is {time}</p>
                 <Link
                     href={route("inertia.users")}
